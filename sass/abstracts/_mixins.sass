@@ -1,0 +1,12 @@
+/* Миксины - это возможность делать шаблоны кода и переиспользовать их. Возможно добавлять аргументы */
+@mixin style-link
+    text-transform: uppercase
+    text-decoration: none
+    color: $color-grey
+    display: inline-block
+
+@mixin clearfix
+    &::after
+        content: ""
+        display: table
+        clear: both

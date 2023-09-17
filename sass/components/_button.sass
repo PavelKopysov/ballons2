@@ -1,0 +1,42 @@
+/* Это компонент кнопки*/
+.btn
+    &:link, &:visited
+    @include style-link
+    position: relative
+    padding: 1.5rem 4rem
+    font-size: 2rem
+    font-weight: 400
+    line-height: normal
+    letter-spacing: .5rem
+    width: 27.7rem
+    height: 5.4rem
+    border-radius: 5rem
+    background: #FFF
+    transition: all .15s
+    &:hover
+        transform: translateY(-4px)
+        box-shadow: $box-shadow
+        &::after
+            transform: scaleX(1.2) scaleY(1.6)
+            opacity: 0
+    &:active
+        transform: translateY(-2px)
+        box-shadow: $box-shadow
+    &::after
+        content: ""
+        background: $color-white
+        width: 100%
+        height: 100%
+        border-radius: 5rem
+        position: absolute
+        top: 0
+        right: 0
+        z-index: -1
+        transition: all .4s
+    &_animated
+        animation-name: btnToUp
+        animation-duration: 1.7s
+        animation-delay: 1s
+        animation-timing-function: ease
+        animation-fill-mode: backwards
+        backface-visibility: hidden
